@@ -1,6 +1,6 @@
 #screen{
     border: solid 1px red;
-    width:300px ;
+    width:350px ;
     height:100px ;
 }
 
@@ -43,10 +43,15 @@ margin-right:2.25em;
 
 #numbers{
     border: solid 12px gold;
+    width: 300px;
+    height: 200px;
+    margin: 10px;
 }
 
 #ops{
     border: solid 10px pink;
+    margin: 10px;
+    font-size: 16px;
 }
 
 #container2{
@@ -56,13 +61,14 @@ margin-right:2.25em;
     justify-content: space-between;
 }
 
-.operator{
-    display: flex;
-    flex: wrap;
 
-}
 
 .num{
-    border-radius: 2px;
+
     padding: 15px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    font-size: 16px;
+ 
 }
