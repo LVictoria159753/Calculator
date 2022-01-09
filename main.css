@@ -1,6 +1,68 @@
-#numbers ,#ops{
+#screen{
+    border: solid 1px red;
+    width:300px ;
+    height:100px ;
+}
+
+#center
+{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+    height: 100vh;
+}
+#wrapper{
+    border: solid 1px rgb(0, 255, 76);
+    width:700px ;
+    height:400px ;
+    padding: 10px;
+
+}
+
+#top{
+    border: solid 2px rgb(46, 29, 109);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+
+#top-left{
+display: flex;
+justify-content: center;
+align-items: center;
 
 
+}
+
+#clear, #backspace{
+padding: 30px;
+border-radius: 10px;
+margin-right:2.25em;
+}
+
+#numbers{
+    border: solid 12px gold;
+}
+
+#ops{
+    border: solid 10px pink;
+}
+
+#container2{
+    border: solid 10px rgb(202, 90, 16);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.operator{
+    display: flex;
+    flex: wrap;
+
+}
+
+.num{
+    border-radius: 2px;
+    padding: 15px;
 }
