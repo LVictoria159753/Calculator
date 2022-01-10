@@ -39,7 +39,7 @@ default:
 }
 */
 
-
+//clicking a button and printing it out on the screen
 const buttons = document.querySelectorAll('button');
 
 // we use the .forEach method to iterate through each button
@@ -47,8 +47,13 @@ buttons.forEach((button) => {
   // and for each one we add a 'click' listener
   button.addEventListener('click', () => {
     x=button.id;
+    document.getElementById("screen").innerHTML=x;
     console.log(x);
   });
 });
 
 
+//Clear Button- refresh content
+document.querySelector("#clear").addEventListener("click", ()=>{
+    window.location.reload()
+});
