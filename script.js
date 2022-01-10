@@ -29,16 +29,15 @@ buttons.forEach((button) => {
   // and for each one we add a 'click' listener
   button.addEventListener('click', () => {
     let x=button.id;
-    document.getElementById("screen").innerHTML=x;
+    document.getElementById("screen").innerHTML+=x;
     console.log(x);
   });
 });
 
 
-//storing display value
 
 
-
+/*
 
 
 //Clear Button- refresh content
@@ -66,3 +65,12 @@ document.querySelector("#equals").addEventListener("click",()=>{
 
 
 } )
+*/
+
+/*
+
+Scrap Code 
+upper-screen
+upperDisplay.textContent = evaluate(operand1, operand2, currentOperator);
+
+*/
