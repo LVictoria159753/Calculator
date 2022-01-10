@@ -16,10 +16,11 @@ function subtract(num1,num2){
     return num1 - num2;
 }
 
-    function add (num,num){
-    return num + num;
+    function add (num1,num2){
+    return num1 + num2;
 }
 
+/*
 switch (operators){
 case '+' :
     return(multiply(num1,num2));
@@ -36,3 +37,18 @@ case '/' :
 default:
     return
 }
+*/
+
+
+const buttons = document.querySelectorAll('button');
+
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+  // and for each one we add a 'click' listener
+  button.addEventListener('click', () => {
+    x=button.id;
+    console.log(x);
+  });
+});
+
+
