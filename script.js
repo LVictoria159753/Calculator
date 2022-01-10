@@ -20,24 +20,6 @@ function subtract(num1,num2){
     return num1 + num2;
 }
 
-/*
-switch (operators){
-case '+' :
-    return(multiply(num1,num2));
-    break;
-case '-' :
-    return(subtract(num1,num2));
-    break
-case '*' :
-    return(multiply(num1,num2));
-    break
-case '/' :
-    return(divide(num1,num2));
-    break;
-default:
-    return
-}
-*/
 
 //clicking a button and printing it out on the screen
 const buttons = document.querySelectorAll('button');
@@ -46,14 +28,41 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
   // and for each one we add a 'click' listener
   button.addEventListener('click', () => {
-    x=button.id;
+    let x=button.id;
     document.getElementById("screen").innerHTML=x;
     console.log(x);
   });
 });
 
 
+//storing display value
+
+
+
+
+
 //Clear Button- refresh content
 document.querySelector("#clear").addEventListener("click", ()=>{
     window.location.reload()
 });
+
+document.querySelector("#equals").addEventListener("click",()=>{
+    switch (ops){
+        case '+' :
+            console.log(multiply(num1, num2));
+            break;
+        case '-' :
+            console.log(subtract(num1, num2));
+            break
+        case '*' :
+            console.log(multiply(num1, num2));
+            break
+        case '/' :
+            console.log(divide(num1, num2));
+            break;
+        default:
+            return;
+        }
+
+
+} )
