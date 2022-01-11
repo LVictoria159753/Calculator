@@ -2,7 +2,29 @@
     border: solid 1px red;
     width:350px ;
     height:100px ;
+    
 }
+
+#upper-screen{
+    border: solid 1px rgb(34, 20, 83);
+    padding:2px;
+    height:15px;
+   margin: 10px;
+   display:flex;
+   justify-content: flex-end;
+}
+
+#lower-screen{
+    border: solid 1px rgb(34, 20, 83);
+    padding:2px;
+   margin: 10px;
+  height: 30px;
+   display:flex;
+   justify-content: flex-end;
+}
+
+
+
 
 #center
 {
