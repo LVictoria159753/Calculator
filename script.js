@@ -1,11 +1,12 @@
 let output = document.getElementById("output");
 let result = document.getElementById("result");
-let num= document.querySelectorAll("num");
+let num= document.querySelectorAll(".num");
+let ops= document.querySelectorAll("operator")
 
 
 //clicking a button and printing it out on the screen
 const buttons = document.querySelectorAll('button');
-
+/*
 // we use the .forEach method to iterate through each button
 buttons.forEach((button) => {
   // and for each one we add a 'click' listener
@@ -13,25 +14,60 @@ buttons.forEach((button) => {
     let x=button.id;
     document.getElementById("upper-screen").innerHTML+=x;
     document.getElementById("lower-screen").innerHTML+=x;
-    console.log(x);
     
   });
 });
+*/
 
-let num1= "";
-let num2= "";
+//num1 and num2 variables filled
+let num1= '';
+let num2= '';
 let operator; 
-buttons.forEach((button) => {
+
+num.forEach((button) => {
     // and for each one we add a 'click' listener
     button.addEventListener('click', (e) => {
-      if (num1===""){
+      if (num1=== ''){
         num1= e.target.innerHTML;
+        console.log(num1);
       }
-       else{
-        num2=e.target.innerHTML; 
-    }
+      else{
+
+        num2 += e.target.innerText;
+        console.log(num2); // Print 2nd number
+
+    }}
     });
   });
+
+//operators filled
+
+ops.forEach((button) => {
+    ops.addEventListener('click', (e)=>{
+        if ( ops !=== "="){
+            operator= e.target.innerHTML;
+        }
+        else {
+            
+        switch (operator)  // Calculate and print output
+            case "+":
+                console.log(add(num1, num2));
+                break;
+  
+            case "-":
+                console.log(subtract(num1, num2));
+                break;
+            case "*":
+                  console.log(multiply(num1, num2));
+                break;
+            case "/":
+                console.log(divide(num1, num2));
+                break;
+
+            }
+        });
+      });
+    
 
 
 //Clear Button- refresh content
