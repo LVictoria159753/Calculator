@@ -57,7 +57,7 @@ align-items: center;
 
 }
 
-#clear, #backspace{
+.clear, #backspace{
 padding: 30px;
 border-radius: 10px;
 margin-right:2.25em;

@@ -3,7 +3,7 @@ let result = document.getElementById("result");
 let num= document.querySelectorAll(".num");
 let ops= document.querySelectorAll(".operator")
 
-/*
+
 //clicking a button and printing it out on the screen
 const buttons = document.querySelectorAll('button');
 
@@ -13,11 +13,10 @@ buttons.forEach((button) => {
   button.addEventListener('click', () => {
     let x=button.id;
     document.getElementById("upper-screen").innerHTML+=x;
-    document.getElementById("lower-screen").innerHTML+=x;
     
   });
 });
-*/
+
 
 //num1 and num2 variables filled
 let num1= '';
@@ -31,13 +30,13 @@ num.forEach((button) => {
         num1 = e.target.innerHTML;
         num1=parseInt(num1);
             console.log("num1:" + num1); //Print first number
-            document.getElementById("upper-screen").innerHTML=num1;
+            document.getElementById("lower-screen").innerHTML=num1;
       }
       else{
         num2= e.target.innerText;
         num2= parseInt(num2);
             console.log("num2:" + num2); // Print second number
-            document.getElementById("upper-screen").innerHTML=num2;
+            document.getElementById("lower-screen").innerHTML=num2;
       }
     });
 });
@@ -49,10 +48,10 @@ ops.forEach(button1 => {
         if (e.target.innerHTML !== "=") {
             operator= e.target.innerHTML;
                 console.log (operator);
-                document.getElementById("upper-screen").innerHTML=operator;
+                document.getElementById("lower-screen").innerHTML=operator;
         }
         else {
-            document.getElementById("upper-screen").innerHTML=operator;
+            document.getElementById("lower-screen").innerHTML=operator;
         switch (operator){  // Calculate and print output
             case "+":
                 console.log(add(num1, num2));
@@ -72,7 +71,7 @@ ops.forEach(button1 => {
                     result=divide(num1, num2);
                         break;
         }
-        document.getElementById("upper-screen").innerHTML= result;
+        document.getElementById("lower-screen").innerHTML= result;
         }
     });
 });
@@ -80,7 +79,7 @@ ops.forEach(button1 => {
 
 
 //Clear Button- refresh content
-document.querySelector("#clear").addEventListener("click", ()=>{
+document.querySelector(".clear").addEventListener("click", ()=>{
     window.location.reload()
 });
 
