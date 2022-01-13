@@ -18,6 +18,20 @@ buttons.forEach((button) => {
   });
 });
 
+let num1= "";
+let num2= "";
+let operator; 
+buttons.forEach((button) => {
+    // and for each one we add a 'click' listener
+    button.addEventListener('click', (e) => {
+      if (num1===""){
+        num1= e.target.innerHTML;
+      }
+       else{
+        num2=e.target.innerHTML; 
+    }
+    });
+  });
 
 
 //Clear Button- refresh content
