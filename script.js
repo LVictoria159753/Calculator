@@ -1,7 +1,7 @@
 let output = document.getElementById("output");
 let result = document.getElementById("result");
 let num= document.querySelectorAll(".num");
-let ops= document.querySelectorAll("operator")
+let ops= document.querySelectorAll(".operator")
 
 
 //clicking a button and printing it out on the screen
@@ -28,28 +28,31 @@ num.forEach((button) => {
     // and for each one we add a 'click' listener
     button.addEventListener('click', (e) => {
       if (num1=== ''){
-        num1= e.target.innerHTML;
-        console.log(num1);
+        num1 = e.target.innerHTML;
+        num1=parseInt(num1);
+        console.log("num1:" + num1);
       }
       else{
-
+   
         num2 += e.target.innerText;
-        console.log(num2); // Print 2nd number
+        num2= parseInt(num2);
+        console.log("num2:" + num2); // Print 2nd number
 
-    }}
+      }
     });
-  });
+});
 
 //operators filled
 
-ops.forEach((button) => {
-    ops.addEventListener('click', (e)=>{
-        if ( ops !=== "="){
+ops.forEach(button1 => {
+    button1.addEventListener('click', (e)=> {
+        if (e.target.innerHTML !== "=") {
             operator= e.target.innerHTML;
+            console.log (operator)
         }
         else {
             
-        switch (operator)  // Calculate and print output
+        switch (operator){  // Calculate and print output
             case "+":
                 console.log(add(num1, num2));
                 break;
@@ -63,10 +66,11 @@ ops.forEach((button) => {
             case "/":
                 console.log(divide(num1, num2));
                 break;
+        }
 
-            }
-        });
-      });
+        }
+    });
+});
     
 
 
@@ -76,7 +80,6 @@ document.querySelector("#clear").addEventListener("click", ()=>{
 });
 
 //document.querySelector(".equals").addEventListener("click",()=>{
-
 
     function add(num1, num2) {
         return num1 + num2;
