@@ -41,6 +41,20 @@ num.forEach((button) => {
     });
 });
 
+
+num.forEach((button) => {
+    // and for each one we add a 'click' listener
+    button.addEventListener('click', (e) => {
+     
+    while (num1 !== '' && num2 !==''){
+        num3=e.target.innerHTML; 
+        console.log(num3);
+        return num3;
+    }
+    });
+});
+        
+
 //operators filled
 
 ops.forEach(button1 => {
@@ -101,6 +115,15 @@ document.querySelector(".clear").addEventListener("click", ()=>{
         return num1 / num2;
     }
 
+x=document.getElementsByClassName(".equals")
+    function dis() {
+        if (document.querySelector(".equals").value === "") {
+            x.disabled = false; //button remains disabled
+        } else {
+            x.disabled = true; //button is enabled
+        }
+    }
+    dis();
 
 /*
 
