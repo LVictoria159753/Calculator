@@ -94,3 +94,8 @@ align-items: center;
     color:#863535;
     border-color:#a12828;
     }
+
+body{
+background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(198,189,83,1) 75%, rgba(227,188,63,1) 88%, rgba(238,188,56,1) 93%, rgba(253,187,45,1) 100%);
+}
